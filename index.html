@@ -15,4 +15,24 @@
 	<button class="MPDButtonIV" onclick="window.open('Downloads/MusicPlayerInstaller.exe','_blank')">Music Player (Installer) x64</button>
 	<h1 class="SupportText">For support, email klovernicky@gmail.com or DM CatPeep#7048 on Discord</h1>
 </body>
+
+<script>
+var R = false;
+var G = false;
+var B = false;
+
+document.addEventListener('keydown', function(event) {
+	if(event.key == "r") {
+	    R = true;
+	}
+	else if(event.key == "g" && R == true) {
+	    G = true;
+	}
+	else if(event.key == "b" && R == true && G == true) {
+	    B = true;
+	    document.body.animate([{backgroundColor: 'rgb(255, 0, 0)'}, {backgroundColor: 'rgb(0, 255, 0)'}, {backgroundColor: 'rgb(0, 0, 255)'}, {backgroundColor: 'rgb(255, 0, 0)'}], {duration: 2000, iterations: Infinity});
+	}
+});
+</script>
+
 </html>
